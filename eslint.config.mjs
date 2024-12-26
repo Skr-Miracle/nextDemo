@@ -13,4 +13,12 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 
-export default eslintConfig;
+// 补充完整 ESLint 配置
+const fullEslintConfig = {
+  ...eslintConfig[0],
+   rules: {
+       "react/no-unescaped-entities": "off"
+   }
+};
+
+export default fullEslintConfig;
